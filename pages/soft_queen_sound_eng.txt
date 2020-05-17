@@ -1,0 +1,50 @@
+[{{:uplevel.png?direct&20|}}](contents_eng)
+[{{:flag_rus.png?direct&20|}}](soft_queen_sound_rus)
+[{{:flag_eng.png?direct&20|}}](soft_queen_sound_eng)
+
+====== queen sound installation and setup ======  
+
+**Queen sound** is purposed for additional sound chanels inside the escape room. This solution is quite big and expensive, but it's very flexible and well suitable for the such cases like extra sound for separate room or big gadget accompaniment.  
+
+===== Devices list =====  
+
+| **device**             | **photo**                      | **comments** |
+| 1. **Power strip**      |  {{:photo:power-strip-2.jpg?direct&100|}} | |
+| 2. **Processor module** |  |  |
+| 2.1. Raspberry Pi          | {{:photo:raspberry_pi_3_1.jpg?direct&200|}} | exact model : raspberry pi 3 model B |
+| 2.2. micro-SD card         | {{ :photo:microsd-1.jpg?direct&40 |}} | class 10, 8GB |
+| 2.3. RPI power supply      | {{ :photo:ac_dc_adapter_1.jpg?direct&60 |}} | 5V, 2-3A |
+| 2.4. USB sound card        | {{ :photo:usb-audio-1.jpg?direct&100 |}} | model : creative SB play 3 |
+| 3. **Audio**               |  |  |
+| 3.1. Audio amplifier       | {{ :photo:tda7498.png?200 |}} | model : TDA7498 chip based amplifier |
+| 3.2. 24VDC                 | {{ :photo:12vdc-ps-1.jpg?direct&200 |}} | requirements > 200W |
+| 3.3. minijack3.5 to 2xRCA  | {{ :photo:minijack_2rca.jpg?100 |}} |  |
+| 3.4. 2, 4 or 8 speakers    | {{ :photo:speakers-1.jpg?direct&100 |}}  |
+
+speakers connection we can look **[here](hw_plug_sound_rus)**, but if you need to plug only two speakers, just plug each speaker to each of two amplifier's channel.  
+
+
+===== Raspberry pi preparations=====  
+
+To prepare raspberry pi, first **[upload OS image](rpi_image_upload_rus)**, and then setup an IP address, using **[this guide](rpi_ip_setup_rus)**. After that, copy the last **queen\_sound** version to the folder **/home/pi/queen/queen\_sound**, using **[this upload guide](rpi_soft_install_rus)**; we are uploading **queen\_sound** application and neccessary audio files.  
+
+
+After that copy **queen\_sound** on your raspberry pi: create folder **queen\_sound** in your home path **(/home/pi)** and just copy application **queen\_sound**, configuration file **queen\_sound.cfg** and sound check file **sound\_check.mp3** there. Use **[xftp application and guide](rpi_ftp_ssh_setup_eng)**.  
+
+
+Use **queen\_sound.cfg** for configuration. As for Raspberry Pi, you can change only one parameter own=ip:port. But we recommend to leave it as is by the default (any:4455).  
+
+
+After, you should set a **queen\_sound** executable attributes to make an opportunity of run this file. To implement this make a right mouse click on the target file and select “Properties” in the popup menu. Select “Permissions” tab in the “File properties” dialog and make an Execute = Anyone,press enter then:  
+![](:screen:rpi_fileprops.jpg)  
+
+
+===== Sound check =====  
+
+To implement a test, create an adapter component in the queen\_studio, set property hwtype=sound, and specify an raspberry IP address, where queen\_sound is running, port=4455. Start queen room and be sure the connection with queen tv is established (adapter becomes green), double left click on the adapter, then submenu "play"  and choose file sound\_check.mp3 to play from the list (files should be copied in advance). For raspberry pi, queen sound plays this audio on all devices (audio, hdmi, usb, ... ), and for windows it plays file on all devices, specified in the queen\_sound.cfg. Btw, queen\_sound.cfg is not required for the raspbery pi.   
+
+
+
+
+
+

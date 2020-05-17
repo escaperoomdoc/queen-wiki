@@ -1,0 +1,43 @@
+[{{:uplevel.png?direct&20|}}](home)
+[{{:flag_rus.png?direct&20|}}](contents_rus)
+[{{:flag_eng.png?direct&20|}}](contents_eng)
+
+# Contents #
+
+
+**[Getting started...](getting_started_eng)**  
+
+
+**Control system mounting**  
+[Queen pack components](queen_pack_eng)    
+[Mounting recommendadtion](cs_mount_eng)  
+
+
+**Raspberry Pi:**  
+[Raspberry Pi OS image install](rpi_image_upload_eng)  
+[Raspberry Pi IP-adress setup](rpi_ip_setup_eng)  
+[Raspberry Pi FTP and SSH clients install](rpi_ftp_ssh_setup_eng)  
+[Raspberry Pi software upload](rpi_soft_install_eng)  
+
+
+**Serial converters setup:**  
+[USR-TCP232-302 setup guide](hw_setup_usr_tcp232_302_eng)  
+[USR-TCP232-410S setup guide](hw_setup_usr_tcp232_410s_eng)  
+
+
+**Software**  
+[How to download](queen_software_eng)  
+[How to activate](queen_software_activate_eng)  
+
+
+**Sound and TV**  
+[Sound plugging guide](hw_plug_sound_eng)  
+[Queen sound setup](soft_queen_sound_eng)  
+[Queen tv setup](soft_queen_tv_eng)  
+
+
+**Requirements and recommendations**  
+[Objects naming system](reqs_object_naming_eng)  
+[Cable parameter estimation](reqs_cable_cut_eng)  
+
+

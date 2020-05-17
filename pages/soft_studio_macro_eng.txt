@@ -1,0 +1,131 @@
+[{{:uplevel.png?direct&20|}}](contetnts_rus)
+[{{:flag_rus.png?direct&20|}}](soft_studio_macro_rus)
+[{{:flag_eng.png?direct&20|}}](soft_studio_macro_eng)
+
+====== Macroeffects editor (description) ======  
+
+To work with *Macroeffects editor* you should already know the guide [[soft_studio_eng|queen studio environment]]
+To get started, you have to open existing or create a new project. Then, you should choose  {{:screen:studio-tools-macroeffects_editor.jpg?direct|}} at the main toolbar, as a result, window of "Macroeffects editor" will open
+
+{{ :screen:soft-macro.jpg?direct |}}  
+
+Main screen will be separated to 3 parts: **macroeffects list**, **editor**, **думаю логгер но пока не знаю**, detailed description is written below.
+
+=====   macroeffects list   =====  
+ 
+Separated to 2 parts. 
+At the top - list of all existing macroeffects of **.mef** format, only the names are listed. 
+At the bottom - macroeffects interaction toolbar.
+|Tool     |Name     |Description     |  
+|{{ :screen:macro-tools-add_new.jpg |}}     |add new macroeffect     |add new macroeffect     |  
+|{{ :screen:macro-tools-delete.jpg |}}     |delete macroeffect     |delete macroeffect      |  
+|{{ :screen:macro-tools-rename.jpg |}}     |rename macroeffect     |rename vhosen macroeffect     |  
+|{{ :screen:macro-tools-refresh.jpg |}}     |refresh files     |refresh files, arrange in alphabetical order    |  
+
+
+New macroeffect creation causes the window  {{:screen:macro-tools-add_new.jpg|}} to appear
+{{ :screen:macro-enter_new_macroeffect_name.jpg |}}  
+enter macroeffect name, then push **Ok** to confirm, **Cancel** to cancel
+ 
+Deleting the chosen file {{:screen:macro-tools-delete.jpg|}} the window appears: 
+{{ :screen:macro-delete_file.jpg?direct |}}  
+to confirm click **__Y__es**, to cancel **__N__o**.  
+To rename chosen file {{:screen:macro-tools-rename.jpg|}} the window appears:  
+{{ :screen:macro-rename_file.jpg?direct |}}  
+to confirm click **__Y__es**, to cancel **__N__o**.  If it's **__Y__es** the window appears:
+{{ :screen:macro-enter_new_macroeffect_name.jpg?direct |}}
+enter new macroeffect name, to confirm click **Ok**, to cancel **Cancel**.   
+
+===== editor =====  
+Separated to 3 parts:
+There are toolbars at the top and the bottom, chosen macroeffect is at the centre. 
+**Top toolbar **
+|Tool     |Name     |Description     |  
+|{{ :screen:macro-editor-close_current_tab.jpg? |}}|close current tab|close current opened macroeffect|  
+|{{ :screen:macro-editor-backup.jpg |}}|backup|makes macroeffect backup, to be able to return to previous version|  
+|{{ :screen:studio-tools-save.jpg |}}|save|saves macroeffects changes|  
+|{{ :screen:macro-editor-save_all.jpg |}}|save all|saves changes in all macroeffects|  
+|{{ :screen:studio-tools-undo.jpg |}}|restore backup|restores previous version of macroeffect|  
+|{{ :screen:macro-editor-open_wizard.jpg |}}|open wizard|opens "macroeffect wizard"|  
+|{{ :screen:studio-tools-run_queen_room.jpg |}}|check up errors|checks macroeffects on errors|  
+
+
+Tool ** close current tab** {{:screen:macro-editor-close_current_tab.jpg|}}  opens "save file" window  
+{{ :screen:macro-editor-close-warning.jpg?direct |}}  
+if it was changed and not saved. To save and close click __Y__es, to close and dismiss click __N__o, to cancel click Cancel.  
+Tool **backup** {{:screen:macro-editor-backup.jpg|}} saves previous versions, if the tick is put in the box.  
+Tools  **save** {{:screen:studio-tools-save.jpg?direct&20|}} & **save all** {{:screen:macro-editor-save_all.jpg?direct|}} don't need confirmation and save files automatically.  
+Tool **restore backup**{{:screen:studio-tools-undo.jpg?direct&20|}}  shows list of all saved versions of this macroeffect.  
+  
+Tool  **check up errors** {{:screen:studio-tools-run_queen_room.jpg?direct&20|}} shows the saving window
+{{ :screen:macro-editor-close-warning_2.jpg? |}}  
+  if the file was changed and was not saved. To save and start check press Yes, to dismiss changes and start check press No, to dismiss changes and start the check press Cancel.
+  Then the file check starts, if there is no errors, the window appears:
+{{ :screen:macro-editor-errors-n.jpg? |}}  
+Press **Ok** to continue.
+If there is an error, the window with the number of the line with an error appears.
+{{ :screen:macro-editor-errors-y.jpg? |}}  
+This example shows an error in the 5th line. If there is more errors, you will be shown the number of a highest line with an error. Then, after the correction, there will be shown the highest line number, that was under that, tou had corrected etc.
+
+**Bottom toolbar**  
+|Tool     |Name     |Description     |
+|{{ :screen:macro-tools-add_new.jpg?direct |}}     |add new effect     |adds new effect     |
+|{{ :screen:macro-tools-delete.jpg?direct |}}     |delete effect     |deletes an existing effect     |
+|{{ :screen:macro-editor-copy_tab.jpg?direct |}}     |copy effect    |adds a copy of chosen effect     |
+|{{ :screen:macro-editor-unselect_all.jpg?direct |}}     |unselect all     |unselects all chosen effects     |  
+
+
+To work with bottom toolbar, you should click on any effect in the middle area of editor window.
+Tool **add new effect** {{:screen:macro-tools-add_new.jpg?direct&20|}} - adds new effect into macroeffect, next, after the chosen.  
+Tool **delete effect** {{:screen:macro-tools-delete.jpg?direct|&20}} - deletes chosen effect, and highlight the previous one (and on and on, afetr deleting).
+Tool **copy effect** {{:screen:macro-editor-copy_tab.jpg?direct&20|}} - copies **1** chosen effect and adds it after the highlighted one.
+Tool **unselect all** - (for convenience, the one can highlight multiple effects, by double-clicking on multiple desired effects)), lets you to unselect highlighted effects.  
+  
+  
+**editor, middle area, macroeffects**  
+{{ :screen:macro-editor-center.jpg?direct |}}  
+Names of macroeffects, presented below **top toolbar**, are opened  (16, 14, 15, 17 in this example). File that is "**bigger**" than others is highlighted and ready to change (16 in the examble). Files might be highlighted with **grey** and **red** colours. **Grey** - file is saved as it was opened (17 in the example), **red** - file is saved in a different way, that means, that was changed and not saved (14, 15, 16 in that example).  
+
+Macroeffect is a pack of effects that have parameter:
+|Name|Ability to change manually|Description|
+|select|no(changes if "type" is changed)|graphic image of object type  |
+|time|no(depends on "offset" parameter and previous "time" value)|start time of an effect|
+|offset|yes|change time|
+|type|yes|choose an object type|
+|object|yes/no(depends on "type")|choose an object in the room|
+|value|yes/no(depends on "type")|value of an parameter (for example, link to a file or volume of sound)|  
+
+
+Coloumn **select** has 6 images, 1 for each type (coloumn type)- dummy, reset, out, send, 1 common for pwm & strobo, one common for play, volume, stop.  
+Coloumn **time** needs to be filled like: **00:00.0** , **HH:MM.S** H - hours, MM - minutes, S - 1/10 second.
+Coloumn **offset**- the first effect **(begin)**, it can't be changed, always 00:00.0. 
+Then, to change starting time of an effet, you need to push a button with the "wavy" line.  {{:screen:macro-editor-center_offset.jpg|}}, then the popup window appears {{:screen:macro-editor-center_offset-var.jpg?direct|&30}}, where, choosing the **offset time**, appears another window  
+{{ :screen:macro-editor-center_offset-spesify.jpg?direct |}}  
+input the time, you want to add to the time of the start of an effect, to commit, push Ok, to dismiss - Cancel. Choosing **same time**, all the changes will be dissmissed, the addition of time will be resetted. **If you'll input wrong time signature, the system will correct it** (for example, input of 70 minutes will turn it to 1 hour 10 minutes).  
+Coloumn **type**- object type, choosing the type, by using arrow, we'll recieve:
+{{ :screen:macro-editor-center_type.jpg?direct |}}  
+then choosing the desired type. 
+Coloumn **object**- choose of the object to control (depends on **type**).  
+Coloumn **value**- choose of an parameter of an object (depends on **type**). 
+|type|object|value|Description|
+|dummy|-|~|no choose of an object, *а величина воспроизведения не влияет**?**_*.  |
+|reset|-|-|reset room options|
+|out|all objects in the room of type (type) out|off/on|two-level effect on\off (incandescent lamp-alike)|
+|pwm|all objects in the room of type (type) pwm|0-255|multi-level effect (diode brightness)|
+|strobo|all objects in the room of type (type) pwm|no/low(low level)/high(high level)|strobe effect for an object|
+|play|all sound-playing equipment; 3 variants: back/voice/fore|path to a file|plays a sound file|
+|volume|all sound-playing equipment; 3 variants: back/voice/fore||0-100|sets sound volume for a file, chosen in "play" effect|
+|stop|all sound-playing equipment; 3 variants: back/voice/fore||-|stops playing of a file, chosen in "play" effect|
+|send|adapter objects |path to a file|plays an adapter command|  
+
+**Editinf effects in macroeffects**  
+To highlight an effect (a line) of macroeffect, tou need to click n it with LMB. To highlight multiple effects you need to doubleclick on line (effect).
+{{ :screen:macro-editor-chighlight_effects.jpg?direct |}}  
+All the highlighted effects will be operating simultaneously.
+There exists 5 actions with objects (3 always, 5 with objects, consisting "\*" ). Click on an any existing window causes another to appear: {{:screen:macro-editor-3_actions.jpg?direct|}}, where **delete item** & **dublicate item**, like at the bottom toolbar. **add item** gives more opportunities {{:screen:macro-editor-3_actions_add.jpg?direct|}} than the bottom toolbar, there are all the functions, like in an offset coloumn (**same time**, **offset time**), и функция **absolute time**- выбрав её появится окно  
+{{ :screen:macro-editor-center_absolute-spesify.jpg?direct |}}  
+input an effect start time.  
+Two additional actions appear, if there are 1 or more objects with "\*". In that case
+{{ :screen:macro-editor-5_actions.jpg?direct |}}  
+first 3 functions are the same. Two additional functions allow you to copy and cuthighlighted elements on an any line (effect) of an macroeffect. 
+ 

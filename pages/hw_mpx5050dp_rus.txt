@@ -1,0 +1,14 @@
+[{{:uplevel.png?direct&20|}}](contents_rus)
+[{{:flag_rus.png?direct&20|}}](hw_mpx5050dp_rus)
+[{{:flag_eng.png?direct&20|}}](hw_mpx5050dp_eng)
+
+
+====== Датчик давления MPX5050DP ======
+
+фотография  
+{{:photo:mpx5050dp-1.jpg|}}
+
+
+схема 
+{{:layout:mpx5050dp-1.png|}}
+

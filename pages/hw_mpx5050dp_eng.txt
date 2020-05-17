@@ -1,0 +1,14 @@
+[{{:uplevel.png?direct&20|}}](contents_rus)
+[{{:flag_rus.png?direct&20|}}](hw_mpx5050dp_rus)
+[{{:flag_eng.png?direct&20|}}](hw_mpx5050dp_eng)
+
+
+====== Pressure sensor MPX5050DP ======
+
+sensor photo  
+{{:photo:mpx5050dp-1.jpg|}}
+
+
+sensor schematics  
+{{:layout:mpx5050dp-1.png|}}
+

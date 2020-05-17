@@ -1,0 +1,35 @@
+[{{:uplevel.png?direct&20|}}](contents_eng)
+[{{:flag_rus.png?direct&20|}}](rpi_soft_install_rus)
+[{{:flag_eng.png?direct&20|}}](rpi_soft_install_eng)
+
+====== Raspberry pi queen software installation guide ======
+
+**Warning! We assuming the raspberrie's default IP address 192.168.100.10. If you have different one, please specify it instead of the default one**
+
+===== 1. Software installation =====  
+
+Use xftp application to copy files (guide is specified below):  
+
+[Raspberry Pi file transfer (FTP) and security shell (SSH) client setup guide](rpi_ftp_ssh_setup_eng)  
+
+
+Open xftp, establish the connection with the target raspberry pi. Create **/home/pi/queen/room** folder if not existed, and then copy queen\_room and required project there. In the result you must see the following files in the folder **/home/pi/queen/room**:  
+
+''
+/macroeffects  
+/media  
+/scenarios  
+room.xml  
+queen_room  
+''
+
+run queen room from VNC, but, before, be sure that queen room has an execute permissions, if it's not not set it up (p.2).
+
+
+===== 2. queen_room execution permission setup =====  
+
+If you copy an executable file (like queen\_room, queen\_tv, etc) you should set an executable attributes to make an opportunity of run this file. To implement this make a right mouse click on the target file and select “Properties” in the popup menu. Select “Permissions” tab in the “File properties” dialog and make an Execute = Anyone,press enter then:  
+
+![](:screen:rpi_fileprops.jpg)  
+
+

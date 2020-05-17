@@ -1,0 +1,8 @@
+====== Курс по наладке Queen ======
+
+===== Список уроков: =====
+  * [[queen_tune_starter_course01|Урок 1. Цифровой вход]]
+  * [[queen_tune_starter_course02|Урок 2. Аналоговый вход]]
+  * [[queen_tune_starter_course03|Урок 3. Первый проект на Queen]]
+
+

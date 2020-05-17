@@ -1,0 +1,176 @@
+[{{:uplevel.png?direct&20|}}](contents_eng)
+[{{:flag_rus.png?direct&20|}}](video_tutorials_rus)
+[{{:flag_eng.png?direct&20|}}](video_tutorials_eng)
+
+====== Queen video tutorials ======
+
+QUEEN Tutorials is a set of video tutorials demonstrating how to make an automation of any escape room using the QUEEN system. We assume this is very easy to do and will share our experience. We created a special (test) escape room for our tutorial – “Damned Amulet” and we will implement a step-by-step demonstration of automation this escape room; we will share a lot of good practices we’ve obtained by years of the activity. The main idea is very simple... Imagine, you have only two documents for the new escape room: the building plan, and the scenario of the gameflow (source documents). We will go the full path from the very beginning to have a automated and atmospheric escape room using the **QUEEN** system. But before we begin, I give a link for all documents, files and queen projects I reference further from the video tutorials:  
+
+
+[tutorial related documents](https://1drv.ms/f/s!Am_hkdn5bouS2REkjEfHMZrEC2KZ) is a set of documents, most of tutorials refer to. For example, if you see in the video description link to a file, for example, wiring.docx, you can find it in this folder.  
+
+
+the folder structure is:  
+**docs** - folder with the documents;  
+**docs/source** - subfolder with the source document, the initial information we have about the escape room, like scenario and building plan;  
+**room** - folder with queen projects we create in the video tutorials below.  
+
+
+===== Chapter 1. Designing the documentation =====
+
+First thing we should do – to make a good documentation. We tried to perform a balance between the entirety and the simplicity, using only typical well known software like office applications, notepad, paint brush and so on. Also we will create an example instances of required documents on the example of our escape room “Damned Amulet”.  
+
+==== Tutotial 1.1. CREATING AN ESCAPE ROOM PLAN ====
+
+tutorial shows how to make a comfortable naming system, create a technician plan and locate each electronic device there.
+
+
+[video](https://1drv.ms/v/s!Am_hkdn5bouS4VmwThmx2rFZS4mC)  
+
+
+**source documents**: source\_scenario.docx, source\_plan.png, **[object naming system](reqs_object_naming_eng)**;  
+**target documents**: plan.pdn, plan.png, readme.docx.  
+
+
+==== Tutotial 1.2. CREATING A WIRING TABLE ====
+
+This tutorial shows how to create a wiring table to make a further cable laying. Also we will show how to estimate a cable type and parameters depending on the target device
+
+
+[video](https://1drv.ms/v/s!Am_hkdn5bouS4VoryTgnM8TAyuo0)  
+
+
+**source documents**: plan.png; readme.docx; **[сables parameter estimation](reqs_cable_cut_eng)**;  
+**result documents**: wiring.docx.
+
+
+===== Chapter 2. Installation of the QUEEN hardware =====
+
+If you purchased QUEEN hardware and it have been already delivered, learn this chapter attentively, otherwise you can skip this chapter while waiting the hardware and go directly to the chapter 3. In this chapter I will explain what is queen hardware in details, how to mount it and plug various electronic. Also I will explain how to plug electronics on the example of our escape room “Damned Amulet”.  
+
+
+==== Tutotial 2.1. INTRODUCTION TO THE QUEEN HARDWARE ====
+
+This tutorial is a short overview of the queen control system (CS), it's components and different electronic examples, that can be plugged to it.
+
+
+[video](https://1drv.ms/v/s!Am_hkdn5bouS4WEuTHj3k2DOYHob)  
+
+
+**source documents**: [control system 3D model](https://1drv.ms/u/s!Am_hkdn5bouS1G9334yBP5ogC4-f); use SketchUp application to watch the model or use this [link](https://1drv.ms/f/s!Am_hkdn5bouS6gvj6_fjSsoyLF3V) to view the static screenshots instead;  
+
+
+==== Tutotial 2.2. MOUNTING THE CONTROL SYSTEM AND PLUGGING TYPICAL DEVICES ====
+
+This tutorial explains how to mount the control system. Also there are various schematic demonstration, shows how properly plug typical electronics with examples.  
+
+
+[video](https://1drv.ms/v/s!Am_hkdn5bouSgZggdw9KTwo3qfs_RA)  
+
+
+**source documents**: [control system 3D model](https://1drv.ms/u/s!Am_hkdn5bouS1G9334yBP5ogC4-f); use SketchUp application to watch the model or use this [link](https://1drv.ms/f/s!Am_hkdn5bouS6gvj6_fjSsoyLF3V) to view the static screenshots instead; you can use also look **[CS mounting wiki guide](cs_mount_eng)** for more information;  
+
+
+==== Tutotial 2.3. UPDATING WIRING TABLE AND PLUGGING DEVICES FOR THE DAMNED AMULET ESCAPE ROOM ====
+
+This tutorial explains how to plug devices properly, in our escape room.  
+
+
+[video](https://1drv.ms/v/s!Am_hkdn5bouSgZgidSe1unRxq3DzTQ)  
+
+
+**source documents**: [connection layouts](https://1drv.ms/f/s!Am_hkdn5bouS6gvj6_fjSsoyLF3V), wiring.docx;  
+
+
+===== Chapter 3. QUEEN software =====
+
+
+This chapter is devoted to the Queen software - the most important part of the system. This is a biggest part of our tutorials due to the various components and abilities. In this tutorials we will create a project for our escape room “Damned Amulet” and program the gameflow from the very beginning.  
+
+==== Tutotial 3.1. INSTALLATION OF THE QUEEN SOFTWARE ====
+
+This tutorial shows how to download and install the queen software, and explains what is the queen project and it's consistance. This is very important intro before we getting started with a software.
+
+
+[video](https://1drv.ms/v/s!Am_hkdn5bouS4g3drzvXDu5eIjZo)  
+
+link to the software is [here](queen_software_eng).  
+
+
+==== Tutotial 3.2. INTRODUCTION TO THE QUEEN STUDIO ====
+
+This tutorial shows a queen studio application GUI interface overview.
+
+
+[video](https://1drv.ms/u/s!Am_hkdn5bouS7DdXg__EQ_TS17Ab)  
+
+
+==== Tutotial 3.3. BINDING ELECTRONIC INPUT AND OUTPUT ====
+
+This tutorial shows how to create and bind electronic components to real hardware using queen studio application. Also it explains how it maps to a queen board and show how to use a queen board emulator in order to test escape room without real hardware.  
+
+
+[video](https://1drv.ms/v/s!Am_hkdn5bouS4jAd1aW0v2zl36uG)  
+
+
+==== Tutotial 3.4. CREATING ESCAPE ROOM MODEL ====
+
+In this tutorial we will create a queen room model for our escape room "Damned Amulet". We hope to explain what is queen room model, how to create various electronic and bind it to the hardware using the real example.  
+
+
+[video](https://1drv.ms/v/s!Am_hkdn5bouS5gOs7gNb_owZ_q_b)  
+
+
+**source documents**: docs/plan.png, docs/readme.docx;  
+**target documents**: queen project in the room/model.  
+
+
+==== Tutotial 3.5. CREATING FULL AUTOMATED SCENARIO ====
+
+In this tutorial we will create a queen room scenario for our escape room "Damned Amulet". In real this is a full automated gameflow. We hope to explain what is queen room scenario and how to program it using the real example.  
+
+
+[video](https://1drv.ms/v/s!Am_hkdn5bouS6X_dw_a4qbmPpLc0)  
+
+
+**source documents**: docs/source\_scenario.docx, queen project in the room/model;  
+**target documents**: docs/scenario.docx, queen project in the room/scenario.  
+
+
+==== Tutotial 3.6. CREATING AND ADDING MACROEFFECTS ====
+
+In this tutorial we will create a special effects (is called macroeffects) for our escape room "Damned Amulet" and add there some media. This will ease a scenario and make it more atmospheric.  
+
+
+[video](https://1drv.ms/v/s!Am_hkdn5bouS7DRV3Fkm5ZeFx-KP)  
+
+
+**source documents**: queen project in the room/scenario;  
+**target documents**: queen project in the room/sfx.  
+
+
+==== Tutotial 3.7. CREATING ADDITIONAL AUDIO USING QUEEN SOUND APPLICATION ====
+
+In this tutorial I show how to create additional sound systems and channels in the queen. We will create a personal sound for the character "guardian" within our escape room "Damned Amulet". I also show how to upload a queen sound on the raspberry pi and we make tests on the emulators.
+
+
+[video](https://1drv.ms/v/s!Am_hkdn5bouS7XvX82FDyTaqv9ZV)  
+
+
+**source documents**: queen project in the room/sfx; **[queen sound guide](soft_queen_sound_eng)**;  
+**target documents**: queen project in the room/sfx\_queensound.  
+
+
+
+==== Tutotial 3.8. OPERATING WITH TV. VIDEO, CLUE SYSTEM, COUNTDOWN TIMER ====
+
+In this tutorial I show how to use displays and TV inside the escape room using queen system. We will use this for a briefing video, indicating a countdown timer and giving a text clues. We make all the modifications within our escape room "Damned Amulet". I also show how to upload a queen tv on the raspberry pi and we make tests on the emulators.
+
+
+[video](https://1drv.ms/v/s!Am_hkdn5bouS7g-0IwoCfQMGNQOV)  
+
+
+**source documents**: queen project in the room/sfx\_queensound; **[queen tv guide](soft_queen_tv_eng)**;  
+**target documents**: queen project in the room/sfx\_queentv.  
+
+

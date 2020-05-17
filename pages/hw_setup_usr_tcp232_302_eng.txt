@@ -1,0 +1,77 @@
+[{{:uplevel.png?direct&20|}}](contents_eng)
+[{{:flag_rus.png?direct&20|}}](hw_setup_usr_tcp232_302_rus)
+[{{:flag_eng.png?direct&20|}}](hw_setup_usr_tcp232_302_eng)
+
+====== USR-TCP232-302 setup guide ======
+
+**__To use several converters in the same network without conflicts it is required to setup differrent IP-addresses. This guide assumes, that IP address of converter is 192.168.100.50 (for example).__**
+
+
+**1. Setup IP-address.**  
+- plug PC (laptop) to the USR-SERIAL-SERVER  device directly using patch-coord with RJ45 connectors;  
+- setup PC (laptop) temporarye IP-address to 192.168.0.1;  
+- open web-browser and set host name:  
+http://192.168.0.7 (factory default IP);  
+User = admin  
+Password = admin  
+- go to the Local IP Config tab and set up as following:
+
+![](:screen:usr_302_ip.jpg)
+
+''
+IP type: Static IP  
+Static IP: 192.168.100.50  
+Submask: 255.255.255.0  
+Gateway: 0.0.0.0  
+DNS Server: 0.0.0.0  
+''
+
+192.168.100.50 - IP-address for example;  
+- press “save”;  
+- press “reboot/reset” in the page appeared after “save” action;  
+- setup up IP-address of PC (laptop) to 192.168.100.2 and reconnect to the device, but using new address: http://192.168.100.50.
+
+
+**if the browser cannot connect to 192.168.0.7, set factory setup default of USR-TCP232: hold reset button pressed 5-10 secinds when powered on and then repeat chapter 1. Reset button is located near the power connector**
+
+
+
+**2. Serial Port settings setup.**  
+go to the Serial Port tab/page and setup it as follows, press “Save” then:
+
+![](:screen:usr_302_rs232.jpg)
+
+''
+Baud Rate: 115200 bps  
+Data Size: 8 bit  
+Parity: None  
+Stop bits: 1  
+Local port number: 4001  
+Remote port number: 4002  
+Work Mode: UDP Server  
+Remote Server Addr:  
+RESET: no  
+LINK: no  
+INDEX:no  
+Similar RFC2217: no  
+''
+
+**4. Reboot**  
+press “Reboot” and confirm then.
+
+
+**5. Notes**  
+
+5.1. In order to plug serial server to [QUEEN BOARD](queen_board_eng) take **UNUSUAL** modem COM-port cable DB9(m)-DB9(m):  
+
+{{ :photo:db9m_db9m_cable_1.png?direct&200 |}}  
+
+Cable pinout must be as following:  
+| **DB9(m) pin**            | **DB9(m) pin**                            |
+| 2 | 3 |
+| 3 | 2 |
+| 5 | 5 |
+
+
+
+

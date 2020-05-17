@@ -1,0 +1,73 @@
+[{{:uplevel.png?direct&20|}}](contents_eng)
+[{{:flag_rus.png?direct&20|}}](soft_studio_scenario_syntax_rus)
+[{{:flag_eng.png?direct&20|}}](soft_studio_scenario_syntax_rus)
+
+
+====== Scenario Editor expressions and conditions syntax ======   
+
+Scenario Editor has two components containing syntax construction: expression (make some action) and condition (compares and return true or false). In both cases it is posiible to use constant values, system and user variables or electronic objects. System variables begin with prefix # (i.e. #now - time from game start, #rand - random integer value from 0 to 1023, #left - time left, #total - total game time). User variables begin with prefix $. Constant variables have no prefix but format depends on it's type: time variables (time) have a format HH:MM:SS.m (i.e. 01:12:05.4 - means 1 hour, 12 minutes, 5 seconds, 4 milliseconds); logic variables (bool) can be true or false; integer variables (int) can be in the range from -2147483648 to 2147483647. Electronic objects have a prefix pwm. ain. din. out. or uni. depends on it's type and postfix .state (i.e. pwm.pwm1.state, din.button1.state, etc...).  
+
+
+
+====== Expressions ======   
+
+Expressions are used for the assignment right part (after symbol '=') to the left part (before symbol '=') and in general have a format: A = B + C, where A - variable, B and C can be variables, constant or electronic objects and must have the same type. There are -,*,/ can be implemented instaead + as well. Important: you must make a space symbol delimiter between all objects (i.e. $i = $j + 1). Lets make some examples of syntaxis for understanding (assume, we have 6 user variables: ival1, ival2 - int, tval1, tval2 - time, bval1, bval2 - boolean and for electronic objects: pwm1, out1, ain1 и din1):  
+
+
+**Int**:  
+| $ival1 = 1008 | assign 1008 to $ival1 |    
+| $ival1 = 5 + 6 | constant summ |    
+| $ival1 = $ival2 - 6 | substrate 6 from $ival2 and assign to $ival1  |    
+| $ival1 = 5 * 6 | constant multiplication |    
+| $ival1 = 20 / $ival1 | divide constant by variable |    
+| $ival1 = $ival2 + $ival1   | variables summ |    
+| $ival1 = ain.ain1.state / 4 | you can use electronic object 'pwm' as integer |    
+| $ival1 = pwm.pwm1.state * 2 | you can use electronic object 'ain' as integer |    
+| $ival1 = pwm.pwm1.state * $ival2 | you can use electronic object with any variable |    
+| $ival1 = #rand / 4 | returns random value from o to 1023/4 (0-255) |    
+
+
+**Bool**:  
+| $bval1 = true | assigns true |    
+| $bval2 = false | assigns false |    
+| $bval1 = $bval2 | variables assignment  |    
+| $bval1 = out.out1.state | you can use electronic object 'out' as boolean |    
+| $bval2 = din.din1.state | you can use electronic object 'din' as boolean |    
+
+
+**Time**:  
+| $tval1 = 01:02:03.5 | time assignment |    
+| $tval1 = 01:02:03.5 + 00:01:04.0 | add times |    
+| $tval1 = #now | get current time |    
+| $tval1 = #now - 00:05:03.0 | get time 5 minutes and 3 seconds ago |    
+| $tval1 = $tval2 + #now | get time offset $tval2 after the current one |    
+
+
+====== Conditions ======   
+
+Conditions are used for the comparation left and right part and have a format: A + B == C + D, where A, B, C, D - can be constant, variables or electronic objects and must have the same type. You can use also symbols -,*,/ for operations (instead of +) and symbols  >,<,>=,<= for comparasion insted of ==. Important: you must make a space symbol delimiter between all objects (i.e. $i = $j + 1). Lets make some examples of syntaxis for understanding (assume, we have 6 user variables: ival1, ival2 - int, tval1, tval2 - time, bval1, bval2 - boolean and for electronic objects: pwm1, out1, ain1 и din1):  
+
+
+**Int**:  
+| $ival1 + 5 < 10 | goes to the true block, if $ival1 + 5 less than 10 |    
+| $ival1 >= pwm.pwm1.state * 2 | goes to the true block, if $ival1 greater or equel than pwm.pwm1.state * 2 |    
+| $ival1 <= ain.ain1.state / 10 | goes to the true block, если $ival1 less or equal than ain.ain1.state / 10 |    
+| $ival1 == $ival2 - 5 | goes to the true block, if $ival1 equals to $ival2 - 5 |    
+| $ival1 + $ival2 > 15 | goes to the true block, if $ival1 + $ival2 more than 15 |    
+
+**Bool**:  
+| $bval1 == true | goes to the true block, if $bval1 is true |      
+| $bval2 == false | goes to the true block, if $bval1 is false |      
+| $bval1 == $bval2 | goes to the true block, if $bval1 equals to $bval2 |    
+| $bval1 == out.out1.state | goes to the true block, if $bval1 is equal to the out1 state |    
+| $bval2 == din.din1.state | goes to the true block, if $bval2 is equal to the din1 state  |    
+| out.out1.state == true | goes to the true block, if out1 is switched on |    
+| din.din1.state == false | goes to the true block, if din1 is switched off |    
+| din.din1.triggerhi == true | goes to the true block, if din1 have triggered to the 'on' state right now |    
+| din.din1.triggerlo == true | goes to the true block, if din1 have triggered to the 'off' state right now |    
+
+**Time**:  
+assumne, we saved a stage start time to the variable $stagestart (for example in the stage's init block): $stagestart = #now:  
+| #now > $stagestart + 00:00:05.0 | goes to the true block, when passed 5 since stage begin |  
+| $tval1 == $stagestart + $tval2 | goes to the true block, when $tval1 will be at the moment when $tval2 passed since the stage begins |  
+

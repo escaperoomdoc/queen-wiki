@@ -1,0 +1,108 @@
+[{{:uplevel.png?direct&20|}}](contetnts_rus)
+[{{:flag_rus.png?direct&20|}}](soft_studio_scenario_rus)
+[{{:flag_eng.png?direct&20|}}](soft_studio_scenario_eng)
+
+
+====== Описание работы со сценарием ======  
+
+Для начала работы необходимо запустить существующий или создать новый проект. Для этого нужно ознакомиться с документом [[soft_studio_rus|Среда проектирования queen studio]]. Далее в панели инструментов главного меню выбираем {{:screen:studio-tools-scenario_editor.jpg?direct|}}, в результате всплывет окно  
+{{ :screen:scenario-editor-choose.jpg?direct |}}  
+где  **new scenario...**- позволяет создать новый сценарий, **scenario.xml**- стандартный сценарий, создается автоматически вместе с созданием проекта, все остальные сценарии созданы в процессе написания данной инструкции.  
+Окно **нового сценария** имеет вид:  
+{{ :screen:scenario-editor-window.jpg?direct |}}  
+Его можно подразделить на: верхнюю панель инструментов, и две части (stages, nodes).  
+  
+  
+===== Верхняя панель инструментов =====    
+
+{{ :screen:scenario-editor-toolbars.jpg?direct |}}  
+|Инструмент|Имя|Описание|
+|{{ :screen:studio-tools-save.jpg?direct |}}|save scenario|сохраняет изменения в сценарии|
+|{{ :screen:scenario-editor-name.jpg?direct |}}|scenario name|изменяет имя сценария|
+|{{ :screen:studio-tools-run_queen_room.jpg?direct |}}|scenario test|позволяет проверить правильность написания сценария|
+|{{ :screen:scenario-editor-backup.jpg?direct |}}|backup|сохраняет предыдущие версии|
+|{{ :screen:studio-tools-undo.jpg?direct |}}|load backup|загружает предыдущие версии|  
+**Примечание**  
+В момент создания нового сценария, он принимает имя scenario\_0000.00.00-00.00.00. где первые 4 цифры- год, далее идет месяц, число, через **-** пишется время в формате часы(24), минуты, секунды. Чтобы переименовать сценарий необходимо, кликнуть по значку замка {{:screen:scenario-editor-name.jpg?direct|}}, в результате откроется окно  
+{{ :screen:scenario-editor-rename.jpg?direct |}}  
+Нажать __Y__es для того чтобы переименовать, и __N__o для отмены. При этом файлу не обязательно давать расширение .xml, можно просто сохранить а система автоматически сделает его нужного расширения.  
+При проверки правильности сценария с помощью **scenario test** {{:screen:studio-tools-run_queen_room.jpg?direct|}}, появится окно  
+{{ :screen:scenario-editor-test.jpg?direct |}}  
+Для теста нажать YES, для отмены NO. Если в сценарии нет ошибки, появится окно  
+{{ :screen:scenario-editor-tese-succes.jpg?direct |}}  
+если ошибка есть, появится окно  
+{{ :screen:scenario-editor-tesе-error.jpg?direct |}}  
+Система автоматически откроет место, в котором есть ошибка.   
+Чтобы не сохранять предыдущие версии (backup), необходимо кликом убрать галочку.  
+При нажатии кнопки {{:screen:studio-tools-undo.jpg?direct|}} **load backup** всплывет окошко со всеми ранее сохраненными версиями  
+{{ :screen:scenario-editor-load_backup.jpg?direct |}}  
+далее кликаем по нужной нам версии и загружаем её.  
+  
+  
+===== Описание stages =====
+**begin stage:** позволяет выбрать начальную стадию, в новом сценарии её необходимо создать.
+Для создания/удаления стадии **stage** необходимо выбрать любую уже существующую стадию  
+{{ :screen:scenario-editor-stage.jpg?direct |}}  
+(в новом сценарии это только **global**) кликнуть правой кнопкой мыши, в результате всплывет окно  
+{{ :screen:scenario-editor-new_stage.jpg?direct |}}  
+(так как **global** нельзя удалить, во всплывающем окне будет отсутствовать функция **delete stage**), кликнув по кнопке {{:screen:macro-tools-add_new.jpg?direct|}}, создается новая стадия, кликнув по кнопке {{:screen:macro-editor-close_current_tab.jpg?direct|}} удаляется выбранная стадия.  
+Чтобы выбрать начальную стадию кликаем по окошку правее **begin stage:** в результате откроется список существующих стадий  
+{{:screen:scenario-editor-begin_stage.jpg?direct|}}  
+кликаем по нужной, она стала начальной стадией сценария.  
+Для визуального перемещения стадий (для удобства восприятия) используются стрелочки {{:screen:scenario-editor-visual_move.jpg?direct|}}, для перемещения вверх левая стрелочка, для перемещения вниз правая стрелочка. 
+Выбрав любую стадию можно изменить её параметры в разделе **stage properties**  
+{{:screen:scenario-editor-stage_properties.jpg?direct|}}  
+В разделе **name** можем изменить имя стадии. В разделе next, выбираем имя стадии, которую хотим поставить следующей.  
+===== Описание nodes =====
+{{ :screen:scenario-editor-nodes.jpg?direct |}}
+В верхней части написано название выбранной для работы стадии, ниже можно ввести комментарий к стадии (комментарий необходимо писать на латинице, после сохранения не воспринимает кириллицу)  
+**Описание node**  
+Представляет собой структуру типа  
+{{ :screen:scenario-node.jpg?direct |}}  
+**variables**- объект сценария, на который можно воздействовать с помощью двух следующих пунктов;  
+**init**- эффект одномоментного воздействия на объект;  
+**loop**- эфеект циклического воздействия на объект;  
+Для создания нового объекта необходимо левой кнопкой мыши кликнуть по **variables**, затем кликнуть по значку {{:screen:macro-tools-add_new.jpg?direct|}} add, в результате появится окно  
+{{ :screen:scenario-node-variables.jpg?direct |}}  
+Все объекты имеют одно визуальное отображение {{:screen:scenario-node-variables_icon.jpg?direct|}}
+|Название объекта |Описание|значения|
+|bool|логический объект |false, true|
+|int|числовой объект|целое число (например 7)|
+|time|временной объект|время в формате 00:00:00.0 (часы):(минуты):(секунды).(доля секунды)|  
+Для создания нового эффекта (**init**,**loop**) необходимо левой кнопкой мыши кликнуть по **init** или**loop**, затем кликнуть по значку {{:screen:macro-tools-add_new.jpg?direct|}} add, в результате появится окно  
+{{ :screen:scenario-node-effects.jpg?direct |}}
+|Эффект|Название эффекта |Описание|
+|{{ :screen:scenario-node-effects-condition.jpg?direct |}}|condition|условный блок|
+|{{ :screen:scenario-node-effects-expression.jpg?direct |}}|expression|действие выполняет выражение|
+|{{ :screen:scenario-node-effects-logger.jpg?direct |}}|logger| записывает сообщение в регистратор|
+|{{ :screen:scenario-node-effects-macro.jpg?direct |}}|macro (macroeffect)|запускает макроэффект|
+|{{ :screen:scenario-node-effects-delay.jpg?direct |}}|delay|выполняет паузу|
+|{{ :screen:scenario-node-effects-goto.jpg?direct |}}|goto|безусловный переход к любой стадии|
+|{{ :screen:scenario-node-effects-send.jpg?direct |}}|send|выполняет отправку через TCP|  
+Для удаления как переменной так и эффекта необходимо выбрать переменную/эффект кликнуть правой кнопкой мыши, выбрать во всплывающем окошке {{:screen:scenario-node-delete.jpg?direct|}}.
+    
+    
+**Описание панели инструментов окна nodes**  
+{{ :screen:scenario-node-toolbar.jpg?direct |}}  
+Панель состоит из 6 инструментов, первый и второй для непосредственного перемещения переменных или эффектов. Четвертый и пятый предназначены для включения эффекта в **condition** условный блок, для этого необходимо выбрать эффект перед **condition** в результате подсветятся эти инструменты, для добавления эффекта в условие **true** необходимо использовать 4 (голубой) инструмент, для добавления эффекта в условие **else** необходимо использовать 5 (красный) инструмент. Третий инструмент предназначен для изъятия эффекта из **condition** условного блока.  
+Шестой инструмент **open wizard** (помощник) предназначен для ???  
+  
+**Описание node properties:**  
+Для **variables** раздел будет иметь вид  
+{{ :screen:scenario-node-properties-variables.jpg?direct |}} 
+|name (Имя)|type (тип)|value (значение)|
+|~|bool|false/true| 
+| |int|целое число|
+| |time|время в формате 00:00:00.0|
+В пункте **name** пишем название переменной на латинице. 
+  
+Для **Эффектов (init/loop)** для большинства эффектов будет свой вид:
+|Type|info|logger|text|file|wait|loop|Delay|stage|adapter|string|expression|
+|condition|read| |||||||||???|
+|expressin|read| |||||||||???|
+|logger|read|logger|???|||||||||
+|macroeffect|read| ||название запускаемого макроэффекта|???|???||||||
+|delay|read| |||||время паузы в десятых долях секунды?|||||
+|goto|read| ||||||название стадии к которой переходим||||
+|send|read| |||||||sound/tv|???||
+

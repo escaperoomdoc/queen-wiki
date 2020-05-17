@@ -1,0 +1,80 @@
+
+====== Оглавление QUEEN ======
+
+
+**[Приступаем к работе](getting_started_rus) - система видео обучения по системе QUEEN**  
+
+
+
+====== Аппаратное обеспечение QUEEN ======
+  
+**Поставляемое оборудование QUEEN**  
+[Стандартная поставка](queen_pack_rus)  
+[Модули расширения](queen_unisense_ver2_rus)  
+[Электромонтаж системы управления](cs_mount_rus)  
+
+
+**Интеграция стороннего оборудования**  
+[Подключение Arduino](queen_unisense_ver1_rus)  
+[Подключение Controllino](queen_controllino_rus)  
+[Подключение Phillips HUE](queen_phillipshue_rus)  
+[Подключение оборудования DMX](queen_dmx_rus)  
+[Интеграция IoT по протоколу MQTT](queen_mqtt_rus)  
+
+
+====== Программное обеспечение QUEEN ======  
+
+**Общие сведения**  
+[Где скачать](queen_software_rus)  
+[Как активировать](queen_software_activate_rus)  
+
+
+**Редактор Queen Studio**  
+[Общие сведения](soft_studio_rus)  
+[Проектирование интерфейса управления](soft_studio_room_rus)  
+[Редактор сценариев](soft_studio_scenario_rus)  
+[Редактор спецэффектов](soft_studio_macro_rus)  
+[Редактор системы подсказок](soft_studio_clues_rus)  
+[Наладка квеста на имитаторе](soft_deploy_win32_rus)  
+
+
+**Развертывание ПО на Raspberry Pi**  
+[Установка образа](rpi_image_upload_rus)  
+[Сетевые настройки](rpi_ip_setup_rus)  
+[Установка FTP и SSH для доступа](rpi_ftp_ssh_setup_rus)  
+[Установка гейм менеджера](rpi_soft_install_rus)  
+
+
+**Мультимедийное сопровождение квеста**  
+[Подключение звука](hw_plug_sound_rus)  
+[Программа управления звуком Queen Sound](soft_queen_sound_rus)  
+[Программа управления экранами Queen TV](soft_queen_tv_rus)  
+
+
+====== Требования и рекомендации  ======   
+
+[Реккомендации к наименованию объектов](reqs_object_naming_rus)  
+[Расчет типов кабелей](reqs_cable_cut_rus)  
+[Структура файлов проектов](reqs_project_filesystem_rus)  
+
+
+====== Статьи по подключению типового оборудования  ======  
+
+**Конвертеры интерфейсов**  
+[Настройка USR-TCP232-302](hw_setup_usr_tcp232_302_rus)  
+[Настройка USR-TCP232-410S](hw_setup_usr_tcp232_410s_rus)  
+
+
+**Подключение типового оборудования**  
+[Датчики давления / дуновения MPX5050) ](hw_mpx5050dp_rus)  
+[RFID считыватели RFC522](hw_rfc522_rus)  
+[Дисковый телефон](hw_rotarydial_rus)  
+
+
+
+
+
+
+
+
+

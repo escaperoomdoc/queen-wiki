@@ -1,0 +1,54 @@
+[{{:uplevel.png?direct&20|}}](contents_eng)
+[{{:flag_rus.png?direct&20|}}](rpi_ftp_ssh_setup_rus)
+[{{:flag_eng.png?direct&20|}}](rpi_ftp_ssh_setup_eng)
+
+====== Raspberry Pi file transfer (FTP) and security shell (SSH) client setup guide ======
+
+**Attention! We assume, that IP-address of Raspberry Pi is 192.168.100.10 (default). If you changed this IP-address, you should use it instead of the default one.**
+
+**1. File transfer (SFTP) utility installation**  
+We will use special utility xftp to implement file transfer, download it by link below:
+
+[xftp](https://1drv.ms/u/s!Am_hkdn5bouShAMvxxxOMKYij_GX)
+
+Install the application and open it. Press “New” button and apply the following settings:
+
+''
+FTP Site parameters:  
+Name = 192.168.100.10  
+Host = 192.168.100.10  
+Protocol = SFTP  
+Port Number = 22  
+Proxy Server = None  
+Login parameters:  
+Use authentification agent = NO  
+Method = Password  
+User Name = pi  
+Password = raspberry  
+''
+
+After setup press mouse double click on recently created connection and new windows must  appear. It is consisted of two panels: left one contains a file system of the local PC (laptop), and the right one - file system of the target raspberry pi. This is a way for file exchange.
+
+
+**2. Remote command line utility installation (SSH).**  
+We will use special utility (xshell) to implement SSH (remote control using special generic unix console), download it by link below:
+
+[xshell](https://1drv.ms/u/s!Am_hkdn5bouSg3APqv7imNzFDFk3)
+
+Install the application and open it. Press “New” button and apply the following settings:
+
+''
+Connection:  
+Name = 192.168.100.10  
+Protocol = SSH  
+Host = 192.168.100.10  
+Port Number = 22  
+Authentification:  
+Method = Password  
+User Name = pi  
+Password = raspberry  
+''
+
+After setup press mouse double click on recently created connection and new SSH windows must  appear.
+
+

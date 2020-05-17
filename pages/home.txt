@@ -1,0 +1,7 @@
+
+====== Welcome to the QUEEN wiki======
+
+Select the language
+[{{:flag_rus.png?direct&20|}}](contents_rus)
+[{{:flag_eng.png?direct&20|}}](contents_eng)
+

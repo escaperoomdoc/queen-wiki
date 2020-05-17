@@ -1,0 +1,43 @@
+[{{:uplevel.png?direct&20|}}](contents_eng)
+[{{:flag_rus.png?direct&20|}}](queen_software_rus)
+[{{:flag_eng.png?direct&20|}}](queen_software_eng)
+
+====== QUEEN Software ======
+
+QUEEN Software was developed as a to help escape room owners making automation process easy and fast. Software contains special editors, adjusting scenario tools, game manager, etc.
+
+
+===== QUEEN Software references =====  
+
+You can download stable release by the URL below:  
+[stable release](https://1drv.ms/f/s!Am_hkdn5bouSgX0lsusXufvFv5YP)
+
+Due to periodically software updates and bug fixes, we always keep last version at the URL below:    
+[beta version](https://1drv.ms/f/s!Am_hkdn5bouSgSG0t5SeiiniA7ie)
+
+
+===== Queen Software files list =====  
+**bass.dll** - audio library for windows  
+**phonon4.dll** - video library for windows  
+**QtCore4.dll, QtGui4.dll, QtNetwork4.dll** - Qt libraries for windows  
+**queen\_board.exe** - emulator of the QUEEN BOARD  
+**queen\_board.cfg** - queen\_board.exe config file  
+**queen\_fingerprint.exe** - queen hardware fingerprint for licensing windows  
+**queen\_fingerprint** - queen hardware fingerprint for licensing on raspberry pi  
+**queen\_unisense.exe** - emulator for QUEEN BUS devices for windows  
+**queen\_unisense.cfg** - queen\_unisense.exe config file  
+**queen\_room** - queen escape room manager for raspberry pi  
+**queen\_room.exe** - queen escape room manager for Windows  
+**queen\_sound** - remote (ethernet/wifi) audio player for raspberry pi  
+**queen\_sound.exe** - remote (ethernet/wifi) audio player for windows  
+**queen\_sound.cfg** - queen\_sound config file  
+**queen\_tv** - remote (ethernet/wifi) video player for raspberry pi  
+**queen\_tv.exe** - remote (ethernet/wifi) video player for windows  
+**queen\_tv.cfg** - queen\_tv config file  
+**sound\_check.mp3** - queen\_sound media file for sound check  
+**typing.mp3** - typing effect audio file for giving clues on queen\_tv  
+**queen\_studio.exe** - queen application for creating escape room projects  
+
+
+
+

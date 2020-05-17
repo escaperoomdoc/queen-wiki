@@ -1,0 +1,35 @@
+[{{:uplevel.png?direct&20|}}](contetnts_rus)
+[{{:flag_rus.png?direct&20|}}](hw_rfc522_rus)
+[{{:flag_eng.png?direct&20|}}](hw_rfc522_eng)
+
+
+====== RFID-ридер на основе модуля RFC522 ======
+
+Данный типовой модуль считывает ID-ключ RFID-карты, работающей на частоте 13.56MHz, и выводит ее идентификатор в монитор порта Arduino.
+
+
+===== 1. Необходимые компоненты =====
+
+| **Наименование**                | **Пример**                                         |
+| RFC522                          | ![]({{ :photo:rfid_rc522_1.jpg?direct&200 |}})          | 
+| Arduino Nano                    | ![]({{ :photo:arduino_nano.jpg?direct&200 |}})     |
+| RFID-карты                      | ![]({{ :photo:rfid_card.jpg?direct&200 |}})        |
+
+
+===== 2. Схема соединения =====
+{{:layout:rfc522-nano-1.png?direct&1000|}}
+
+
+===== 3. Прошивка =====
+
+Прошивается модуль при помощи обычноый Arduino IDE и файла:  
+https://1drv.ms/f/s!Am_hkdn5bouSqQhG2jiTGoVQxcJG
+
+который взят с официального сайта:  
+https://playground.arduino.cc/Learning/MFRC522
+
+
+===== 4. Порядок работы =====
+
+При подключении модуля к кабелю (external cable) на выходе D2 (серый провод) должно быть 0V, а при поднесении "своей" карты - 5V.
+

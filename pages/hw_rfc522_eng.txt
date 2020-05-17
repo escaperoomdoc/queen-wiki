@@ -1,0 +1,36 @@
+[{{:uplevel.png?direct&20|}}](contetnts_rus)
+[{{:flag_rus.png?direct&20|}}](hw_rfc522_rus)
+[{{:flag_eng.png?direct&20|}}](hw_rfc522_eng)
+
+
+====== RFID-reader on RFC522 module ======
+
+This module reads 13.56MHz tags id and output it into Arduino port monitor.
+
+
+===== 1. Components =====
+
+| **Наименование**                | **Пример**                                         |
+| RFC522                          | ![]({{ :photo:rfid_rc522_1.jpg?direct&200 |}})          | 
+| Arduino Nano                    | ![]({{ :photo:arduino_nano.jpg?direct&200 |}})     |
+| RFID-карты                      | ![]({{ :photo:rfid_card.jpg?direct&200 |}})        |
+
+
+===== 2. Schematics =====
+{{:layout:rfc522-nano-1.png?direct&1000|}}
+
+
+===== 3. Firmware =====
+
+Use arduino IDE to upload arduino nano with the following firmware:  
+https://1drv.ms/f/s!Am_hkdn5bouSqQhG2jiTGoVQxcJG
+
+it was taken from the official site:  
+https://playground.arduino.cc/Learning/MFRC522
+
+
+===== 4. Howto =====
+
+Connect your arduino nano to the laptop USB, upload the firmware and open port monitor using Ctlr-Shift-M key combination. Port monitor will show your tag id each time you put it near.
+
+

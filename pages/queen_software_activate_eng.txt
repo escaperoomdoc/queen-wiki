@@ -1,0 +1,34 @@
+[{{:uplevel.png?direct&20|}}](contents_eng)
+[{{:flag_rus.png?direct&20|}}](queen_software_activate_rus)
+[{{:flag_eng.png?direct&20|}}](queen_software_activate_eng)
+
+====== QUEEN software activation ======
+
+QUEEN software is distributed for free, except the game manager application **queen room**. Game manager has two builds: windows и raspberry pi. Without an activation **queen room** application works in trial mode only 15 minutes; after that it shuts down with a "15 minutes time expired" error indication. You can see also trial mode indication in the **queen room** window caption:  
+
+
+{{:trial_sample.png|}}  
+
+
+When you purchase a **[queen pack](queen_pack_rus)** or software license, we activate **queen room** application within one day. Follow this guide to do that...  
+
+
+**queen room** game manager is binded to the target hardware (PC/laptop motherboard or raspberry pi). The first thing you should do - to get a target hardware fingerprint, where the **queen room** application will be running at. To implement this procedure run **queen fingerprint** on the target hardware, you can download it from **[queen software page](queen_software_eng)**. It has also builds both on windows and raspberry pi. **queen fingerprint** shows a target hardware fingerprint as md5 hash code, for example:  
+
+
+{{:fingerprint_sample.png|}}  
+
+
+copy this fingerprint **ff7e92ac40fd2f4e72c684afa244d196** and send it to the queen developers to Escape Room Doctor on e-mail **dsi@escapedoc.com**. Using your fingerprint we will generate an activation key in md5 format as well and send it as a e-mail reply. For example we generated the following key: **aa0944b790eb9e7b9cc68aa5b6e0b1be**.  
+
+
+After receiving an activation key, open your queen project in the **queen studio** editor and paste the key **aa0944b790eb9e7b9cc68aa5b6e0b1be** in the 'key' field of the properties window in the project block (it will appear when you left mouse click on the canvas):  
+
+
+{{:key_sample.png|}}  
+
+
+Save and copy your project to the target hardware and run it. Trial mode will disappear. You can find it, if the window caption will not include an indication like **trial version, 15 minutes operating limit**, and the **queen room** can be assumed activated for the lifetime further.  
+
+
+

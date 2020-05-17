@@ -1,0 +1,110 @@
+[{{:uplevel.png?direct&20|}}](contents_rus)
+[{{:flag_rus.png?direct&20|}}](queen_unisense_ver1_rus)
+[{{:flag_eng.png?direct&20|}}](queen_unisense_ver1_eng)
+
+
+====== Работа с Queen Unisense (version 1) ======
+
+Queen unisense (далее просто unisense) - это средство расширения стандартных возможностей **queen board**. Unisense решает следующие основные задачи:  
+- расширение каналов ввода/вывода;  
+- расширение функций: сервоприводы, адресные/пиксельные ленты, получение идентификаторов RFID меток, обработка сигналов от IR-передатчиков, организация беспроводной связи и т.д.;  
+- интеграция любых arduino-контроллеров с произвольной прошивкой в систему **QUEEN** (для продвинутых пользователей).  
+
+
+===== Аппаратная часть Queen Unisense =====
+
+
+По сути unisense представляет собой обычную arduino и rs485 преобразователь интерфейсов. Unisense можно приобрести в виде готовой платы магазине ERD, а можно элементарно сделать ее самим.  
+
+
+==== Плата Queen Unisense ====
+
+
+{{:photo:unisense_ver_1.jpg?direct|}}
+
+
+**Внимание!** На данный момент плата queen unisense version 1 снята с производства.  
+
+
+==== Создание Queen Unisense своими руками ====
+
+
+Queen Unisense можно изготовить из любого arduino микроконтроллера. Для этого нужен сам микроконтроллер, клеммный шилд, резистор на 1 кОм (опционально) и модуль TTL-RS485. Все это можно купить в любом магазине. Ниже будут приведены схемы для сборки Unisense для трех разных контроллеров Arduino Uno, Nano, Mega. Во всех случаях мы настоятельно рекомендуем использовать screw shield для крепления проводов в клеммы, а также резистор на 1 кОм в качестве pull down резистора для того, чтобы заглушить передатчик RS485 модуля пока Arduino не проинициализирована.  
+
+
+
+=== Queen Unisense для Arduino Uno ===
+
+
+{{:layout:uno_rs485.jpg?direct&700|}}
+
+
+Для этого необходимо иметь следующие компоненты
+
+| arduino uno | uno screw shield | rs485 module | 1 kOm resistor |
+| {{ :photo:arduino_uno_1.jpg?direct&200 |}} | {{ :photo:uno_screw_shield-1.jpg?direct&200 |}} | {{ :photo:arduino_ttl_rs485.jpg?direct&200 |}} | {{ :photo:resistor_1kohm.jpg?direct&200 |}} |
+
+Для удобства можно использовать DFRobot RS485 shield вместо rs485 module и резистора (это по сути одно и тоже):  
+{{:photo:uno_rs485_shield.jpg?200|}}
+
+=== Queen Unisense для Arduino Nano ===
+
+
+{{:layout:nano_rs485.png?direct&600|}}
+
+
+Для этого необходимо иметь следующие компоненты
+
+| arduino nano | nano screw shield | rs485 module | 1 kOm resistor |
+| {{ :photo:arduino_nano.jpg?direct&200 |}} | {{ :photo:nano_screw_shield.jpg?direct&200 |}} | {{ :photo:arduino_ttl_rs485.jpg?direct&200 |}} | {{ :photo:resistor_1kohm.jpg?direct&200 |}} |
+
+
+=== Queen Unisense для Arduino Mega ===
+
+
+{{:layout:mega_rs485.png?direct&600|}}
+
+
+Для этого необходимо иметь следующие компоненты
+
+| arduino mega | mega screw shield | rs485 module | 1 kOm resistor |
+| {{ :photo:arduino_mega.jpg?direct&200 |}} | {{ :photo:mega_screw_shield.jpg?direct&200 |}} | {{ :photo:arduino_ttl_rs485.jpg?direct&200 |}} | {{ :photo:resistor_1kohm.jpg?direct&200 |}} |
+
+
+**Внимание!** На некоторых чипах Arduino Mega некорректно работает RS485 на UART0 (RX0,TX0). Но uniense может работать и на других UART: RX1/TX1, RX2/TX2, RX3,TX3. Для этого нужно просто подключить два провода вместо RX0/TX0 к другому UART порту.  
+
+
+
+===== Подключение Queen Unisense к Control Sysytem =====
+
+Queen unisense запитывается от 5В и подключается к Control System посредством RS485, который предоставляет Serial Server:  
+
+{{:photo:usr-tcp232-410s.jpg?direct|}}
+
+Подключение осуществляется прямым образом: клемма A сервера к клемме A unisense, клемма B сервера к клемме B unisense. К одному Serial Server можно подключить до 8 устройств queen unisense.  
+
+
+===== Подготовка программ для Queen Unisense =====
+
+Для прошивки unisense требуется установить Arduino IDE. Мы рекомендуем версию 1.0.6. Вы можете скачать его с **[официального сайта](https://www.arduino.cc/en/Main/OldSoftwareReleases#1.0.x)** или с **[нашего облака](https://1drv.ms/u/s!Am_hkdn5bouSwg4V65WxZoAahS5h)**.  
+
+
+После установки необходимо зайти в папку расположения программы Arduino IDE, далее нужно зайти в папку **libraries**, создать там папку **queen\_bus** и поместить туда файлы библиотеки queen unisense, которые можно скачать **[здесь](https://1drv.ms/f/s!Am_hkdn5bouSgQzVUgigHulZTJhY)**. Все готово для работы с unisense и теперь вы можете воспользоваться готовыми прошивками или написать свою.  
+
+
+
+===== Готовые прошивки для Queen Unisense =====
+
+Здесь перечислены готовые прошивки для queen unisense. Все, что требуется - это открыть любую из прошивок при помощи Arduino IDE, извлечь arduino из screw shield, подключить к ноутбуку, прошить его нужной прошивкой и поместить arduino обратно в screw shield.  
+
+
+**[fullin](https://1drv.ms/u/s!Am_hkdn5bouSgtFEn_Zo0y-uwDlLvw?e=FnpZU2)** - все пины, исключая 13 - он не используется, настроены как digital IN и подтянуты к 5V, аналоговые пины - как analog IN; прошивка под nano/uno;  
+
+
+**[fullout](https://1drv.ms/u/s!Am_hkdn5bouSgtFFoF2Y2y2VMm0bQQ?e=svJiNB)** - все пины настроены как digital OUT (пины 3, 5, 6, 9, 10, 11 - могут использоваться как PWM); прошивка под nano/uno;  
+
+
+**[inout](https://1drv.ms/u/s!Am_hkdn5bouSgtFG6sJcUL5R7HpvDw?e=7txWPx)** - пины 3-13 - digital OUT (пины 3, 5, 6, 9, 10, 11 - могут использоваться как PWM); A0-5 - digital IN; A6-A7 - analog IN;  
+
+
+

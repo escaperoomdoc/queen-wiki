@@ -1,0 +1,43 @@
+[{{:uplevel.png?direct&20|}}](contents_rus)
+[{{:flag_rus.png?direct&20|}}](queen_software_rus)
+[{{:flag_eng.png?direct&20|}}](queen_software_eng)
+
+====== Программное обеспечение QUEEN ======
+
+Программное обеспечение QUEEN предназначено для создания модели квеста в специальном графическом редакторе, настройки сценария и логики игры и предоставления оператору рабочего интерфейса управления.
+
+
+===== Ссылки на ПО QUEEN =====  
+
+Вы можете скачать последний стабильный релиз программного обеспечения по ссылке ниже:  
+[stable release](https://1drv.ms/f/s!Am_hkdn5bouSgX0lsusXufvFv5YP)
+
+Поскольку программа постоянно обновляется, то можно всегда попробовать бета версию отсюда:  
+[beta version](https://1drv.ms/f/s!Am_hkdn5bouSgSG0t5SeiiniA7ie)
+
+
+===== Структура ПО Queen =====  
+
+**bass.dll** - аудио библиотека под windows  
+**phonon4.dll** - видео библиотека под windows  
+**QtCore4.dll, QtGui4.dll, QtNetwork4.dll** - Qt библиотеки под windows  
+**queen\_board.exe** - программа-имитатор QUEEN BOARD  
+**queen\_board.cfg** - файл конфигурации для queen\_board.exe для windows  
+**queen\_fingerprint** - программа съема отпечатка железа для лицензирования для raspberry pi  
+**queen\_fingerprint.exe** - программа съема отпечатка железа для лицензирования для windows  
+**queen\_unisense.exe** - программа-имитатор для устройств, подключаемых к шине QUEEN BUS для windows  
+**queen\_unisense.cfg** - файл конфигурации для queen\_unisense.exe  
+**queen\_room** - программа управления комнатой (квест менеджер) для raspberry pi  
+**queen\_room.exe** - программа управления комнатой (квест менеджер), нужен для отладки комнаты под Windows  
+**queen\_sound** - программа для проигрывания звука по сети Ethernet для raspberry pi  
+**queen\_sound.exe** - программа для проигрывания звука по сети Ethernet для windows  
+**queen\_sound.cfg** - конфигурационный файл для queen\_sound  
+**queen\_tv** - программа для проигрывания видео по сети Ethernet для raspberry pi  
+**queen\_tv.exe** - программа для проигрывания видео по сети Ethernet для windows  
+**queen\_tv.cfg** - конфигурационный файл для queen\_tv  
+**sound\_check.mp3** - звуковой файл для проверки звука  
+**typing.mp3** - эффект печатающей машинке при вывода подсказок на queen\_tv  
+**queen\_studio.exe** - среда проектирования QUEEN  
+
+
+

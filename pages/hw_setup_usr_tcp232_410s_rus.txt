@@ -1,0 +1,104 @@
+[{{:uplevel.png?direct&20|}}](contents_rus)
+[{{:flag_rus.png?direct&20|}}](hw_setup_usr_tcp232_410s_rus)
+[{{:flag_eng.png?direct&20|}}](hw_setup_usr_tcp232_410s_eng)
+
+====== Инструкция по настройке USR-TCP232-410S ======
+
+**__На локации может быть несколько конвертеров и чтобы избежать конфликтов IP-адресов  необходимо их настраивать уникально (по умолчанию в инструкции он 192.168.100.50).__**
+
+**1. Установка IP-адреса.**  
+- подключаем сервисный компьютер/ноутбук (далее service-pc) к  USR-SERIAL-SERVER напрямую патч-кордом RJ45;
+- устанавливаем временный IP адрес сервисного компьютера в 192.168.0.1;
+- открываем web-browser и в адресной строке вводим:  
+http://192.168.0.7  
+User = admin  
+Password = admin  
+- в появившемся окне переходим на вкладку Local IP Config и настраиваем все следующим образом:
+
+![](:screen:usr_410s_ip.jpg)
+
+''
+IP type: Static IP  
+Static IP: 192.168.100.50  
+Submask: 255.255.255.0  
+Gateway: 0.0.0.0  
+''
+
+192.168.100.50 - IP-адрес для примера;  
+- далее нажимаем Save  
+- в появившемся окне жмем Reboot/Reset module;  
+- устанавливаем IP адрес компьютера 192.168.100.2 и пересоединяемся к устройству по адресу: http://192.168.100.50.  
+
+
+**если не удалось подключиться по адресу 192.168.0.7, то необходимо вернуть настройки USR-TCP232 в заводские, для чего нажмите на утопленную кнопку рядом с разъемом питания и удерживайте секунд 5-10 при включенном питании, после чего повторите пункт 1**  
+
+
+
+**2. Установка параметров RS232.**  
+переходим на вкладку RS232 и настраиваем все следующим образом и нажимаем  “Save”.
+
+![](:screen:usr_410s_rs232.jpg)
+
+''
+Baud Rate: 115200 bps  
+Data Size: 8 bit  
+Parity: None  
+Stop bits: 1  
+Flow control and RS485: None  
+Local port number: 4001  
+Remote port number: 4002  
+Work Mode: UDP Server  
+Timeout: 0 seconds  
+UART packet Time: 2ms  
+UART packet length: 0  
+SyncBaudrate: no  
+Enable USR Cloud: no  
+Device ID, Communications Code are ignored  
+''
+
+**3. Установка параметров RS485.**  
+переходим на вкладку RS485 и настраиваем все следующим образом и нажимаем  “Save”.
+
+![](:screen:usr_410s_rs485.jpg)
+
+''
+Baud Rate: 115200 bps  
+Data Size: 8 bit  
+Parity: None  
+Stop bits: 1  
+Flow control and RS485: None  
+Local port number: 4011  
+Remote port number: 4012  
+Remote server Addr:  
+Work Mode: UDP Server  
+Timeout: 0 seconds  
+UART packet Time: 1ms  
+UART packet length: 32  
+SyncBaudrate: no  
+Enable USR Cloud: no  
+Device ID, Communications Code are ignored  
+''
+
+**4. Перезагрузка.**  
+Нажимаем на “Reboot” и подтверждаем.
+
+**5. Примечания.**  
+
+5.1. Для подключении [QUEEN BOARD](queen_board_rus) необходимо воспользоваться обычным модемным кабелем COM-порта DB9(f)-DB9(m):  
+{{ :photo:db9m_db9f_cable_1.png?direct&400 |}}  
+
+Распиновка кабеля должная быть прямой:
+| **DB9(f) pin**            | **DB9(m) pin**                            |
+| 2 | 2 |
+| 3 | 3 |
+| 5 | 5 |
+
+
+
+
+
+
+
+
+
+

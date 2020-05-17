@@ -1,0 +1,25 @@
+[{{:uplevel.png?direct&20|}}](contents_rus)
+[{{:flag_rus.png?direct&20|}}](queen_board_rus)
+[{{:flag_eng.png?direct&20|}}](queen_board_eng)
+
+
+====== QUEEN BOARD ======
+
+**Queen Board** purpose is to control escape room electronics and handle various sensors. **Queen Board** is included in the base **Queen** package. Specification:
+
+· 15 relay channels (RELAY): max 10A – 250V for AC / 10A – 30V for DC;  
+· 15 PWM power switches (PWM): max 24 for VDC - 20A;  
+· 15 channels of digital IN (DIN): pulled up to 5V, switching GND;  
+· 15 channels of ADC with built-in potentiometer 0-100kOhm to register analog voltage 0-5V or handle resistance sensors;  
+· RS232 as a communication interace.  
+
+
+{{ :layout:queen_board.png |}}
+
+
+**Queen Board** has total 60 channels ( 30 for input and 30 for output ) and usually it's enough to control majority of escape rooms. In a case of insuffient queen board channel, there is an opportunity to put another one.
+
+**Queen Board** size is approximately 30cm x 20cm (A4 sheet), power voltage is 12V; we used Arduino Mega 2560 as a processor unit. In a case of Arduino Mega 2560 damaging, it can be easily replaced by another one. To communicate with **Queen Board** use RS232 interface, i.e. **[USR-TCP232-410S](hw_setup_usr_tcp232_410s_eng)** in accordance with **[queen mounting guide](cs_mount_eng)**.
+
+
+
